@@ -127,11 +127,20 @@ if(state.glutenFreeCrust === true) {
 
 function renderPrice() {
 // Iteration 4: change the HTML of `<aside class="panel price">`
+const aside = document.querySelector('.panel.price');
+
+
+
+
+const priceString = input.value;
+const priceList = document.createElement("li");
+li.textContent = priceString;
+
 const priceList = document.querySelectorALL(".price");
 priceList.forEach(price => {
 console.log("price", priceList);
 
-  const list = document.createElement("ul");
+  
   list.className = "price-ingredient";
   
   const markupPepperoni = 
