@@ -67,18 +67,18 @@ function renderGreenPeppers() {
 function renderWhiteSauce() {
   // Iteration 2: add/remove the class "sauce-white" of `<section class="sauce">`
   document.querySelectorAll('.sauce-white').forEach(oneSauceWhite => {
-    const whiteSauce = document.querySelector(".sauce")
+    const whiteSauce = document.querySelector(".sauce");
       console.log(whiteSauce);
-      whiteSauce.classList.toggle("sauce-white")
+      oneSauceWhite.classList.toggle(".sauce-white")
     });
   }
 
 function renderGlutenFreeCrust() {
   // Iteration 2: add/remove the class "crust-gluten-free" of `<section class="crust">`
   document.querySelectorAll('.crust-gluten-free').forEach(oneGlutenFreeCrust=> {
-    const crust1 = document.querySelector(".crust")
+    const crust1 = document.querySelector(".crust");
       console.log(crust1);
-      crust1.classList.toggle("crust-gluten-free")
+      oneGlutenFreeCrust.classList.toggle(".crust-gluten-free")
   }); 
 }
 
@@ -91,56 +91,59 @@ function renderButtons(evt) {
 const active1 = document.querySelectorAll(".btn");
 console.log(active1);
 if(state.pepperoni === true) {
-  document.querySelector(".btn-pepperoni").classList.add("active");
-  console.log(btnPep);
+  document.querySelector('.btn.btn-pepperoni').classList.add("active");
+  console.log('btnPep');
 } else{
-  document.querySelector(".btn-pepperoni".classList.remove("active"));
+  document.querySelector('.btn.btn-pepperoni').classList.remove("active");
 };
 if(state.mushrooms === true) {
-  document.querySelector(".btn-mushrooms").classList.add("active");
-  console.log(btnPep);
+  document.querySelector('.btn.btn-mushrooms').classList.add("active");
+  console.log('btnMushroom');
 } else{
-  document.querySelector(".btn-mushrooms".classList.remove("active"));
+  document.querySelector('.btn.btn-mushrooms').classList.remove("active");
 };
 if(state.greenPeppers === true) {
-  document.querySelector(".btn-green-peppers").classList.add("active");
-  console.log(btnPep);
+  document.querySelector('.btn.btn-green-peppers').classList.add("active");
+  console.log('btnGreenPeppers');
 } else{
-  document.querySelector(".btn-green-peppers".classList.remove("active"));
+  document.querySelector('.btn.btn-green-peppers').classList.remove("active");
 };
 if(state.whiteSauce === true) {
-  document.querySelector(".btn-sauce").classList.add("active");
-  console.log(btnPep);
+  document.querySelector('.btn.btn-sauce').classList.add("active");
+  console.log('btnWhiteSauce');
 } else{
-  document.querySelector(".btn-sauce".classList.remove("active"));
+  document.querySelector('.btn.btn-sauce').classList.remove("active");
 };
 if(state.glutenFreeCrust === true) {
-  document.querySelector(".btn-crust").classList.add("active");
-  console.log(btnPep);
+  document.querySelector('.btn.btn-crust').classList.add("active");
+  console.log('btnGlutenFreeCrust');
 } else{
-  document.querySelector(".btn-crust".classList.remove("active"));
+  document.querySelector('.btn.btn-crust').classList.remove("active");
 };
 
 }
 
 
 
-function renderPrice(prices) {
+function renderPrice() {
 // Iteration 4: change the HTML of `<aside class="panel price">`
-ingredients.foreach((ingredient) => {
+const priceList = document.querySelectorALL(".price");
+priceList.forEach(price => {
+console.log("price", priceList);
+
   const list = document.createElement("ul");
   list.className = "price-ingredient";
   
   const markupPepperoni = 
-    `<li> $1 ${ingredient.name}</li>`;
+  `<li> $1 ${ingredient[0].name}</li>`;
   const markupMushroom = 
-  `<li> $1 pepperoni</li>`;
+  `<li> $1 ${ingredient[1].name}</li>`;
   const markupGreenPeppers = 
-    `<li> $1 pepperoni</li>`;
+  `<li> $1 ${ingredient[2].name}</li>`;
   const markupWhiteSauce = 
-    `<li> $3 pepperoni</li>`;
+  `<li> $3 ${ingredient[3].name}</li>`;
   const markupGlutenFreeCrust = 
-    `<li> $5 pepperoni</li>`;
+  `<li> $5 ${ingredient[4].name}</li>`;
   
   const pepperoniPrice = document.getElementById("pepperoni-price");
   const mushroomsPrice = document.getElementById("mushroom-price");
