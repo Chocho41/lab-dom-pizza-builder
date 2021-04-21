@@ -127,81 +127,81 @@ if(state.glutenFreeCrust === true) {
 
 function renderPrice() {
 // Iteration 4: change the HTML of `<aside class="panel price">`
-const aside = document.querySelector('.panel.price');
+//const aside = document.querySelector('.panel.price');
 
 
 
 
-const priceString = input.value;
-const priceList = document.createElement("li");
-li.textContent = priceString;
+//const priceString = input.value;
+//const priceList = document.createElement("li");
+//li.textContent = priceString;
 
-const priceList = document.querySelectorALL(".price");
-priceList.forEach(price => {
-console.log("price", priceList);
+//const priceList = document.querySelectorALL(".price");
+//priceList.forEach(price => {
+//console.log("price", priceList);
 
   
-  list.className = "price-ingredient";
+  //list.className = "price-ingredient";
   
-  const markupPepperoni = 
-  `<li> $1 ${ingredient[0].name}</li>`;
-  const markupMushroom = 
-  `<li> $1 ${ingredient[1].name}</li>`;
-  const markupGreenPeppers = 
-  `<li> $1 ${ingredient[2].name}</li>`;
-  const markupWhiteSauce = 
-  `<li> $3 ${ingredient[3].name}</li>`;
-  const markupGlutenFreeCrust = 
-  `<li> $5 ${ingredient[4].name}</li>`;
+ // const markupPepperoni = 
+  //`<li> $1 ${ingredient[0].name}</li>`;
+  //const markupMushroom = 
+ // `<li> $1 ${ingredient[1].name}</li>`;
+  //const markupGreenPeppers = 
+  //`<li> $1 ${ingredient[2].name}</li>`;
+  //const markupWhiteSauce = 
+ // `<li> $3 ${ingredient[3].name}</li>`;
+  //const markupGlutenFreeCrust = 
+  //`<li> $5 ${ingredient[4].name}</li>`;
   
-  const pepperoniPrice = document.getElementById("pepperoni-price");
-  const mushroomsPrice = document.getElementById("mushroom-price");
-  const greenPeppersPrice = document.getElementById("green-pepper-price");
-  const whiteSaucePrice = document.getElementById("white-sauce-price");
-  const glutenFreeCurstPrice = document.getElementById("gluten-free-crust-price");
+//   //const pepperoniPrice = document.getElementById("pepperoni-price");
+//   const mushroomsPrice = document.getElementById("mushroom-price");
+//   const greenPeppersPrice = document.getElementById("green-pepper-price");
+//   const whiteSaucePrice = document.getElementById("white-sauce-price");
+//   const glutenFreeCurstPrice = document.getElementById("gluten-free-crust-price");
 
-  let totalPrice = 10;
+//   let totalPrice = 10;
   
-  if(state.pepperoni === true) {
-    list.innerHTML = markupPepperoni;
-    listPrice.appendChild(card);
-    totalPrice =+ 1;
-  } else {
-    pepperoniPrice.remove();
-  };
-  if(state.mushrooms === true) {
-    priceIngredient.innerHTML = markupMushroom;
-    listPrice.appendChild(card);
-    totalPrice =+ 1;
-  } else {
-    mushroomsPrice.remove();
-  };
-  if(state.greenPeppers === true) {
-    priceIngredient.innerHTML = markupGreenPeppers;
-   listPrice.appendChild(card);
-   totalPrice =+ 1;
-  } else {
-    greenPeppersPrice.remove();
-  };
-  if(state.whiteSauce === true) {
-  priceIngredient.innerHTML = markupWhiteSauce;
-  listPrice.appendChild(card);
-  totalPrice =+ 3;
-} else {
-  whiteSaucePrice.remove();
-};
-  if(state.glutenFreeCrust === true) {
-  priceIngredient.innerHTML = markupGlutenFreeCrust;
-  listPrice.appendChild(card);
-  totalPrice =+ 5;
-} else {
-  glutenFreeCurstPrice.remove();
-};
-});
+//   if(state.pepperoni === true) {
+//     list.innerHTML = markupPepperoni;
+//     listPrice.appendChild(card);
+//     totalPrice =+ 1;
+//   } else {
+//     pepperoniPrice.remove();
+//   };
+//   if(state.mushrooms === true) {
+//     priceIngredient.innerHTML = markupMushroom;
+//     listPrice.appendChild(card);
+//     totalPrice =+ 1;
+//   } else {
+//     mushroomsPrice.remove();
+//   };
+//   if(state.greenPeppers === true) {
+//     priceIngredient.innerHTML = markupGreenPeppers;
+//    listPrice.appendChild(card);
+//    totalPrice =+ 1;
+//   } else {
+//     greenPeppersPrice.remove();
+//   };
+//   if(state.whiteSauce === true) {
+//   priceIngredient.innerHTML = markupWhiteSauce;
+//   listPrice.appendChild(card);
+//   totalPrice =+ 3;
+// } else {
+//   whiteSaucePrice.remove();
+// };
+//   if(state.glutenFreeCrust === true) {
+//   priceIngredient.innerHTML = markupGlutenFreeCrust;
+//   listPrice.appendChild(card);
+//   totalPrice =+ 5;
+// } else {
+//   glutenFreeCurstPrice.remove();
+// };
+// });
 
-totalPriceMarkup = `${totalPrice}`;
+// totalPriceMarkup = `${totalPrice}`;
 
-}
+// }
 
 renderEverything();
 
